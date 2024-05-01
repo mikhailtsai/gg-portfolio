@@ -1,8 +1,13 @@
 @import '@taiga-ui/core/styles/taiga-ui-local.less';
 
+:host {
+  max-width: @space * 80;
+  width: 100%;
+}
+
 .image {
   height: @space * 80;
-  width: @space * 80;
+  width: 100%;
 
   &:before {
     transition: background-color 0.1s ease-in-out;
