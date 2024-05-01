@@ -2,47 +2,68 @@
 
 <tui-root [tuiMode]="'onDark'">
   <div class="tui-container tui-container_adaptive">
-    <tui-app-bar>
-      <button tuiButton tuiSlot="left">
-        Back
-      </button>
-      Хуй
-      <button tuiButton tuiSlot="right">
-        Action
-      </button>
+    <tui-app-bar class="tui-space_bottom-4">
+      <label tuiSlot="left" tuiTitle>Georgii Gorshenin Gamedev</label>
+
+      <a tuiButton size="m" tuiSlot="right" href="https://github.com/imnixan">
+        <tui-icon
+          icon="tuiIconGithub"
+        ></tui-icon>
+      </a>
+
+      <a tuiButton tuiSlot="right" href="https://t.me/ggorshenin">
+        <tui-svg src="/assets/telegram.svg"></tui-svg>
+      </a>
     </tui-app-bar>
 
-    <div
-      tuiCardLarge
-      tuiSurface="elevated"
-    >
-      <div tuiHeader>
-        <h2 tuiTitle>
-          Title
-          <span tuiSubtitle>Subtitle</span>
-        </h2>
+    <h2 tuiTitle="l">
+      About me
+    </h2>
 
-        <aside tuiAccessories>
-          <tui-avatar
-            appearance="primary"
-            src="tuiIconStar"
-          ></tui-avatar>
-        </aside>
-      </div>
+    <p class="tui-text_body-l">
+      My name is Georgii Gorshenin, and I'm a mobile game developer specializing in Unity. My passion for gaming started in my childhood, and I've always dreamt of being a part of this exciting industry. Though my journey into the world of IT took some time, I found my calling in game development.
+      <br /><br />
+      My recent commercial work experience involves crafting simple hyper-casual games. I strive to create games from scratch, minimizing the use of plugins.
+      <br /><br />
+      My goal is to thrive in the game development industry, gain experience, and create games that inspire and bring joy to players. I'm ready to take on any challenges and work on projects that allow me to bring my gaming dreams to life.
+    </p>
 
-      <footer>
-        <button
-          appearance="secondary"
-          size="m"
-          tuiButton
-          type="button"
-        >
-          Label
-        </button>
-      </footer>
+    <h2 tuiTitle="l">
+      My games
+      <div tuiSubtitle>Examples of work available for showing</div>
+    </h2>
+
+    <div class="games">
+      <app-game
+        [title]="'ShootingJump'"
+        [subTitle]="'Casual, Shooter'"
+        [icon]="'tuiIconMonitor'"
+      />
+
+      <app-game
+        [title]="'Goalkeeper'"
+        [subTitle]="'HyperCasual, Sport'"
+      />
+
+      <app-game
+        [title]="'Animals'"
+        [subTitle]="'HyperCasual, puzzle, nature'"
+      />
+
+      <app-game
+        [title]="'AviaGames'"
+        [subTitle]="'HyperCasual, Gambling'"
+        [noApk]="true"
+      />
     </div>
+
+    <h2 tuiTitle="l">
+      Contacts
+    </h2>
+
+    <p class="footer tui-text_body-l">
+      Email: <a tuiLink href="mailto:vcmvenom@gmail.com">vcmvenom&#64;gmail.com</a><br />
+      Telegram: <a tuiLink href="https://t.me/ggorshenin">&#64;ggorshenin</a>
+    </p>
   </div>
-
-
-
 </tui-root>

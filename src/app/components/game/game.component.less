@@ -1,0 +1,17 @@
+@import '@taiga-ui/core/styles/taiga-ui-local.less';
+
+.image {
+  height: @space * 80;
+  width: @space * 80;
+
+  &:before {
+    transition: background-color 0.1s ease-in-out;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  &:hover {
+    &:before {
+      background: rgba(0, 0, 0, 0.3);
+    }
+  }
+}

@@ -1,0 +1,45 @@
+<div
+  class="image"
+  tuiCardLarge
+  tuiSurface="elevated"
+  [style.background]="'url(\'/assets/portfolio/' + title() + '/Screens/screen.jpg\') no-repeat center / cover'"
+>
+  <div tuiHeader>
+    <h2 tuiTitle>
+      {{ title() }}
+      <span tuiSubtitle>{{ subTitle() }}</span>
+    </h2>
+
+    <aside tuiAccessories>
+      <tui-avatar
+        [src]="icon()"
+      ></tui-avatar>
+    </aside>
+  </div>
+
+  <footer>
+    <a
+      appearance="accent"
+      size="m"
+      tuiButton
+      type="button"
+      [href]="'/assets/portfolio/' + title() + '/' + title() + 'WebGL/index.html'"
+    >
+      Play in WebGL
+    </a>
+
+    @if (!noApk()) {
+      <a
+        class="tui-space_top-4"
+        appearance="glass"
+        size="m"
+        tuiButton
+        type="button"
+        [href]="'/assets/portfolio/' + title() + '/' + title() + '.zip'"
+        target="_blank"
+      >
+        Download APK
+      </a>
+    }
+  </footer>
+</div>

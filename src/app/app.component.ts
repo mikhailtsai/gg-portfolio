@@ -1,16 +1,17 @@
 import {NgDompurifySanitizer} from "@tinkoff/ng-dompurify";
 import {
-  TUI_SANITIZER, TuiModeModule, TuiRootModule, TuiThemeNightModule,
+  TUI_SANITIZER, TuiLinkModule, TuiModeModule, TuiRootModule, TuiSvgModule, TuiThemeNightModule,
 } from "@taiga-ui/core";
 import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
 import {
   TuiAppBarModule, TuiAvatarModule, TuiButtonModule,
   TuiCardModule,
-  TuiHeaderModule,
+  TuiHeaderModule, TuiIconModule,
   TuiSurfaceModule,
   TuiTitleModule
 } from "@taiga-ui/experimental";
+import {GameComponent} from "./components/game/game.component";
 
 @Component({
   selector: 'app-root',
@@ -27,6 +28,10 @@ import {
     TuiTitleModule,
     TuiAvatarModule,
     TuiButtonModule,
+    GameComponent,
+    TuiIconModule,
+    TuiSvgModule,
+    TuiLinkModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.less',
